@@ -7,7 +7,7 @@ RUN yarn install
 COPY . .
 RUN yarn build
 
-FROM nginx:1.20.2-alpine as app
+FROM nginx:1.21.6-alpine as app
 
 COPY --from=build /app/package.json /usr/local/lib/
 
